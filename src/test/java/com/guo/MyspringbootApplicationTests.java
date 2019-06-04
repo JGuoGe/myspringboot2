@@ -1,4 +1,4 @@
-package com.guo.myspringboot;
+package com.guo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
