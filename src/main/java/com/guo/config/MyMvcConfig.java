@@ -20,7 +20,7 @@ public class MyMvcConfig extends WebMvcConfigurerAdapter {
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         // super.addViewControllers(registry);
-        //浏览器发送 /atguigu 请求来到 success
+        //浏览器发送 /guo 请求来到 success
         registry.addViewController("/guo").setViewName("success");
     }
 
@@ -47,8 +47,8 @@ public class MyMvcConfig extends WebMvcConfigurerAdapter {
         };
         return adapter;
     }
-    @Bean
-    public LocaleResolver localeResolver(){
-        return new MyLocaleResolver();
-    }
+//    @Bean
+//    public LocaleResolver localeResolver(){
+//        return new MyLocaleResolver();
+//    }
 }

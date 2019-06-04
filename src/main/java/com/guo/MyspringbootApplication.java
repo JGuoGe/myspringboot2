@@ -20,17 +20,20 @@ public class MyspringbootApplication {
 		SpringApplication.run(MyspringbootApplication.class, args);
 	}
 
-	@Bean
-	public ViewResolver myViewReolver(){
-		return new MyViewResolver();
-	}
+//	@Bean
+//	public ViewResolver myViewReolver(){
+//		return new MyViewResolver();
+//	}
 
-	public static class MyViewResolver implements ViewResolver{
-
-		@Override
-		public View resolveViewName(String viewName, Locale locale) throws Exception {
-			return null;
-		}
-	}
+	/**
+	 * 自定义视图解析器
+	 */
+//	public static class MyViewResolver implements ViewResolver{
+//
+//		@Override
+//		public View resolveViewName(String viewName, Locale locale) throws Exception {
+//			return null;
+//		}
+//	}
 
 }
