@@ -11,6 +11,7 @@
 	<groupId>com.guo</groupId>
 	<artifactId>myspringboot</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
 	<name>myspringboot</name>
 	<description>Demo project for Spring Boot</description>
 
@@ -77,7 +78,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
-			<!--<scope>provided</scope>-->
+			<scope>provided</scope>
 		</dependency>
 		<!--Spring Boot进行单元测试的模块-->
 		<dependency>

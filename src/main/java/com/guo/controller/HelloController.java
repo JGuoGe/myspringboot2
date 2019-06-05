@@ -24,9 +24,9 @@ public class HelloController {
     @ResponseBody
     @RequestMapping("/hello2")
     public  String hello2(@RequestParam("user") String user){
-//        if(user.equals("aaa")){
-//            throw new UserNotExistException();
-//        }
+        if(user.equals("aaa")){
+            throw new UserNotExistException();
+        }
         return "Hello World";
     }
 

@@ -46,7 +46,6 @@ public class EmployeeController {
     @PostMapping("/emp")
     public String addEmp(Employee employee){
         //来到员工列表页面
-
         System.out.println("保存的员工信息："+employee);
         //保存员工
         employeeDao.save(employee);

@@ -7,6 +7,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import javax.sql.DataSource;
+import java.sql.Connection;
+
 /**
  * SpringBoot单元测试;
  *
@@ -18,8 +21,17 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class MyspringbootApplicationTests {
 	@Autowired
 	ApplicationContext ioc;
+
+	@Autowired
+	DataSource dataSource;
 	@Test
 	public void contextLoads() {
+		//org.apache.tomcat.jdbc.pool.DataSource
+//		System.out.println(dataSource.getClass());
+//
+//		Connection connection = dataSource.getConnection();
+//		System.out.println(connection);
+//		connection.close();
 	}
 
 }
