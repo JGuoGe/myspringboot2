@@ -1,10 +1,12 @@
 package com.guo.bean;
 
+import java.io.Serializable;
+
 /**
  * @author guo
  * @create 2019-05-21 20:45
  */
-public class Employee {
+public class Employee implements Serializable {
     private Integer id;
     private String lastName;
     private Integer gender;

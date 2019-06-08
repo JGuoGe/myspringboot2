@@ -29,8 +29,8 @@ public class DeptController {
         departmentMapper.insertDept(department);
         return department;
     }
-    @GetMapping("/emp/{id}")
-    public Employee getEmp(@PathVariable("id") Integer id){
-        return employeeMapper.getEmpById(id);
-    }
+//    @GetMapping("/emp/{id}")
+//    public Employee getEmp(@PathVariable("id") Integer id){
+//        return employeeMapper.getEmpById(id);
+//    }
 }
