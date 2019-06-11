@@ -1,6 +1,7 @@
 package com.guo.controller;
 
 import com.guo.exception.UserNotExistException;
+import com.guo.service.AsyncService;
 import com.guo.service.RedisService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,6 +22,16 @@ public class HelloController {
     @Autowired
     private RedisService redisService;
 
+    @Autowired
+    AsyncService asyncService;
+    
+    @GetMapping("/helloAsync")
+    public String helloAsync(){
+        asyncService.hello();
+        return "success";
+    }
+    
+    
     @ResponseBody
     @RequestMapping("/hello")
     public String hello(){

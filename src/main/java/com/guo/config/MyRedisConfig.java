@@ -16,14 +16,14 @@ import java.net.UnknownHostException;
  * @author guo
  * @create 2019-06-05 22:36
  */
-//@Configuration
+@Configuration
 public class MyRedisConfig {
     /**
      * 自定义RedisTemplate ,定义自己的序列化器
      * @param redisConnectionFactory
      * @return
      * @throws UnknownHostException
-     *//*
+     */
     @Bean
     public RedisTemplate<Object, Employee> empRedisTemplate(
             RedisConnectionFactory redisConnectionFactory)
@@ -53,24 +53,18 @@ public class MyRedisConfig {
     public RedisCacheManager employeeCacheManager(RedisTemplate<Object, Employee> empRedisTemplate){
         RedisCacheManager cacheManager = new RedisCacheManager(empRedisTemplate);
         //key多了一个前缀
-
         //使用前缀，默认会将CacheName作为key的前缀
         cacheManager.setUsePrefix(true);
-
         return cacheManager;
     }
 
     @Bean
     public RedisCacheManager deptCacheManager(RedisTemplate<Object, Department> deptRedisTemplate){
         RedisCacheManager cacheManager = new RedisCacheManager(deptRedisTemplate);
-        //key多了一个前缀
-
-        //使用前缀，默认会将CacheName作为key的前缀
         cacheManager.setUsePrefix(true);
-
         return cacheManager;
     }
-*/
+
 
 
 }
